@@ -1,5 +1,8 @@
+### Python script to extract strings from thousands of CSV files (downloaded from JSTOR's data for research feature) 
+### and insert them into a mySQL database
+
 ### This code takes ids from a file and composes lists of the ngrams from the papers corresponding to those ids. 
-### The list also includes author name and gender
+### The list also includes the number of times each ngram was used and author name and gender
 ### It then executes mySQL commands through pymysql to insert the ngrams into my database
 
 from stemming.porter2 import stem
