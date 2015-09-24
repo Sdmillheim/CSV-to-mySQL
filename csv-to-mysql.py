@@ -1,7 +1,8 @@
 ### Python script to extract strings from thousands of CSV files (downloaded from JSTOR's data for research feature) 
 ### and insert them into a mySQL database
 
-### This code takes ids from a file and composes lists of the ngrams from the papers corresponding to those ids. 
+### This code takes IDs from a file and composes lists of the ngrams (words and phrases) from the papers corresponding 
+### to those IDs. 
 ### The list also includes the number of times each ngram was used and author name and gender
 ### It then executes mySQL commands through pymysql to insert the ngrams into my database
 
@@ -52,7 +53,7 @@ connection = pymysql.connect(host='localhost',
 cursor = connection.cursor()
 counter = 0
 ### Some example SQL commands to execute
-#sql = "CREATE TABLE bigrams(ngram varchar(200),count int, paper_id varchar(20),author varchar(200),gender int)"
+#sql = "CREATE TABLE bigrams(ngram varchar(300),count int, paper_id varchar(20),author varchar(200),gender int)"
 #sql = "CREATE TABLE trigrams(ngram varchar(300),count int, paper_id varchar(20),author varchar(200),gender int)"
 #sql = "CREATE TABLE quadgrams(ngram varchar(300),count int, paper_id varchar(20),author varchar(200),gender int)"
 #sql = "INSERT INTO bigrams (ngram, count, paper_id, author, gender) VALUES (%s, %s, %s, %s, %s)"
